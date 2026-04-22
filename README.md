@@ -29,7 +29,11 @@ Gemma E4B is one of the only production models where PLE is a first-class built-
 
 ## Status
 
-Early stage — spec and analysis only. Implementation pending.
+Phase 1 (Profiling) — complete (infrastructure for PLE dominance scoring).
+Phase 2 (Hollowing) — complete (structured pruning + Q2/Q3/Q4 quantization).
+Phase 3 (PLE Adapters) — complete (low-rank adapter architecture + fine-tuning).
+Phase 4 (GGUF Encoding) — complete (two-plane GGUF encoder/decoder).
+Phase 5 (Evaluation) — pending.
 
 ## License
 

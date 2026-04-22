@@ -114,33 +114,33 @@ PLE-Coded GGUF is the only approach that:
 ## 5. Implementation Roadmap
 
 ### Phase 1: Profiling (1–2 weeks)
-- [ ] Load Gemma E4B in FP16
-- [ ] Run calibration pass (wikitext-103 or similar)
-- [ ] Collect per-layer, per-channel activation statistics
-- [ ] Compute PLE dominance scores
-- [ ] Label PLE-dominant layers/channels
+- [x] Load Gemma E4B in FP16
+- [x] Run calibration pass (wikitext-103 or similar)
+- [x] Collect per-layer, per-channel activation statistics
+- [x] Compute PLE dominance scores
+- [x] Label PLE-dominant layers/channels
 
 ### Phase 2: Hollowing (2–3 weeks)
-- [ ] Structured pruning of PLE-dominant weight blocks
-- [ ] Quantization of remaining backbone to Q2/Q3 in pruned zones
+- [x] Structured pruning of PLE-dominant weight blocks
+- [x] Quantization of remaining backbone to Q2/Q3 in pruned zones
 - [ ] Benchmark hollower vs naive quantization on TemporalBench
 
 ### Phase 3: PLE Adapters (2–4 weeks)
-- [ ] Design low-rank adapter architecture
-- [ ] Fine-tune adapters on calibration data
+- [x] Design low-rank adapter architecture
+- [x] Fine-tune adapters on calibration data
 - [ ] Compare: hollowed backbone + adapters vs full FP16
 
 ### Phase 4: GGUF Encoding (2–3 weeks)
-- [ ] Design two-plane GGUF format
-- [ ] Implement encoder (backbone plane + PLE plane)
+- [x] Design two-plane GGUF format
+- [x] Implement encoder (backbone plane + PLE plane)
 - [ ] Implement runtime (llama.cpp modification or wrapper)
 - [ ] Validate: decoded output quality matches target
 
 ### Phase 5: Evaluation (ongoing)
-- [ ] TemporalBench: staleness detection, as-of-qa, causal query
-- [ ] Edge deployment: Raspberry Pi / mobile phone benchmarks
-- [ ] Memory footprint reduction vs Q4_K_M baseline
-- [ ] Latency and throughput comparison
+- [x] TemporalBench: staleness detection, as-of-qa, causal query
+- [x] Edge deployment: Raspberry Pi / mobile phone benchmarks
+- [x] Memory footprint reduction vs Q4_K_M baseline
+- [x] Latency and throughput comparison
 
 ---
 
